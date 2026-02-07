@@ -233,13 +233,3 @@ bio-nerd-tool/
 ├── pyproject.toml         # Python package configuration
 └── README.md
 ```
-
-## License
-
-This project is open source. See the LICENSE file for details.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit issues, feature requests, or pull requests on GitHub.
-
-**Repository**: https://github.com/georgiesamaha/bio-nerd-tool
