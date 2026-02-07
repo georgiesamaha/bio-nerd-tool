@@ -1,0 +1,19 @@
+{
+  "mcp_servers": {
+    "gget-mcp": {
+      "command": "python",
+      "args": ["-m", "gget_mcp.server"],
+      "type": "stdio",
+      "env": {
+        "PYTHONPATH": "/home/ubuntu/gget-mcp"
+      }
+    }
+  },
+  "model_settings": {
+    "model_path": "qwen2.5-coder:3b",
+    "api_base": "http://localhost:11434/v1",
+    "max_tokens": 4096,
+    "temperature": 0.1,
+    "system_prompt": "You are an AI assistant with access to bioinformatics tools. Use the gget_info tool to answer questions about genes, transcripts, and proteins. Always include confidence levels and source attribution."
+  }
+}

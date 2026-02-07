@@ -1,0 +1,43 @@
+[project]
+name = "gget-mcp-server"
+version = "0.1.0"
+description = "Safety-bounded MCP server for gget bioinformatics queries with epistemic controls"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.2.0",
+    "gget>=0.28.0",
+    "pydantic>=2.0.0",
+    "typing-extensions>=4.0.0",
+    "httpx>=0.24.0",
+    "requests>=2.25.0",
+    "typer>=0.9.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "mypy>=1.0.0"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+gget-mcp = "gget_mcp.server_simple:main"
+gget-mcp-simple = "gget_mcp.server_simple:main"
+gget-mcp-server = "gget_mcp.server:main_sync"
+gget-mcp-cli = "gget_mcp_cli:main"
+
+[tool.black]
+line-length = 88
+target-version = ["py310"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
