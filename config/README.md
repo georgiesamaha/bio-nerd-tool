@@ -155,7 +155,6 @@ export PYTHONPATH="/home/ubuntu/gget-mcp:$PYTHONPATH"
 
 # Fix file permissions
 chmod +x test_integration.py
-chmod +x download.sh
 ```
 
 ## Environment Variables
